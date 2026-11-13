@@ -1,62 +1,255 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrés Cardona | Perfil</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andrés Cardona | Desarrollador en Formación</title>
+   
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   </head>
 
-
-  <body>
+  <body class="bg-slate-950 text-slate-200 font-sans antialiased flex flex-col min-h-screen">
     
-    <h1>Andrés Cardona</h1>
-    <img src="img/foto-perfil.png" alt="Foto de perfil de Andrés Cardona" width="120">
-    <p>Soy <strong>coder</strong> de desarrollo de software en formación</p>
-  
-    <h2>Habilidades</h2>
-    <ul>
-      <li>Estructura de páginas con HTML</li>
-      <li>Control de versiones con Git y GitHub</li>
-    
-    </ul>
+    <!-- BARRA DE NAVEGACIÓN FIJA Y RESPONSIVA -->
+    <nav class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 shadow-sm">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 py-3 sm:py-0 sm:h-16 flex flex-wrap items-center justify-between gap-2">
+        
+        <!-- Marca / Logo en texto -->
+        <a href="#" class="text-base sm:text-lg font-bold text-white tracking-tight">
+          Andrés<span class="text-cyan-400">.dev</span>
+        </a>
 
-    <h2>Mi ruta de aprendizaje</h2>
-    <ol>
-      <li>HTML y CSS</li>
-      <li>JavaScript</li>
-      <li>Backend y bases de datos</li>
+        <!-- Enlaces de navegación -->
+        <ul class="flex items-center gap-3 sm:gap-6 text-xs sm:text-sm font-medium text-slate-300">
+          <li><a href="#habilidades" class="hover:text-cyan-400 transition">Habilidades</a></li>
+          <li><a href="#proyectos" class="hover:text-cyan-400 transition">Proyectos</a></li>
+          <li><a href="#ruta" class="hover:text-cyan-400 transition">Ruta</a></li>
+          <li><a href="#contacto" class="hover:text-cyan-400 transition">Contacto</a></li>
+        </ul>
+
+      </div>
+    </nav>
+    
+    <div class="max-w-4xl mx-auto px-6 py-12 flex-grow w-full">
       
-    </ol>
+      
+      <!-- ENCABEZADO PROFESIONAL (HERO SECTION) -->
+      <header class="mb-16 flex flex-col md:flex-row items-center md:items-start gap-8 text-center md:text-left">
+        
+        <!-- Foto de perfil con brillo sutil -->
+        <img 
+          src="img/foto-perfil.png" 
+          alt="Foto de perfil de Andrés Cardona" 
+          class="w-32 h-32 rounded-full object-cover border-2 border-cyan-500 shadow-lg shadow-cyan-500/20 shrink-0"
+        >
 
-    <h2>Mi horario de estudio</h2>
-    <table border="1">
-      <thead>
-        <tr>
-          <th>Día</th>
-          <th>Tema</th>
-          <th>Horas</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Lunes</td>
-          <td>HTML</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>Miércoles</td>
-          <td>CSS</td>
-          <td>3</td>
-        </tr>
-       
-      </tbody>
-    </table>
+        <!-- Información principal -->
+        <div>
+          <span class="inline-block bg-cyan-500/10 text-cyan-400 text-xs font-semibold px-3 py-1 rounded-full border border-cyan-500/20 mb-3">
+            Disponible para proyectos y aprendizaje continuo
+          </span>
+          
+          <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight">
+            Andrés Cardona
+          </h1>
+          
+          <p class="text-xl text-cyan-400 font-medium mt-2">
+            Full Stack Developer en Formación
+          </p>
+          
+          <p class="text-slate-400 mt-4 leading-relaxed max-w-2xl">
+            Desarrollador de software en formación apasionado por el pensamiento analítico, la resolución de problemas y el trabajo en equipo. Construyendo soluciones reales desde los fundamentos con Python, JavaScript, HTML5, Bootstrap CSS, Tailwind CSS y Git.
+          </p>
 
-    <h2>Contacto</h2>
-    <p>
-      <a href="https://github.com/AndresCardona-1314" target="_blank">Mi GitHub</a>
-      <a href="mailto:cardonagilandresfelipe@gmail.com">Escríbeme</a>
-    </p>
+          
 
+          <!-- Botones de acción rápida -->
+          <div class="mt-6 flex flex-wrap justify-center md:justify-start gap-4">
+            <a href="#proyectos" class="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition">
+              <i class="fa-solid fa-folder-open"></i>
+              Ver Proyectos
+            </a>
+            <a href="https://github.com/AndresCardona-1314" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-sm font-medium px-4 py-2.5 rounded-lg transition">
+              <i class="fa-brands fa-github text-base"></i>
+              GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/andr%C3%A9s-cardona-a17379248/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-sm font-medium px-4 py-2.5 rounded-lg transition">
+              <i class="fa-brands fa-linkedin text-base text-cyan-400"></i>
+              LinkedIn
+            </a>
+            <a 
+              href="./docs/HV-Andres-Felipe-Cardona-Gil.pdf" 
+              download="HV-Andres-Felipe-Cardona-Gil.pdf" 
+              class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-cyan-400 border border-cyan-500/40 text-sm font-medium px-4 py-2.5 rounded-lg transition"
+            >
+              <i class="fa-solid fa-file-arrow-down text-base"></i>
+              Descargar CV
+            </a>
+          </div>
+        </div>
+
+      </header>
+
+      <!-- 2. CONTENIDO PRINCIPAL -->
+      <main class="space-y-16">
+        
+        <!-- Sección: Habilidades -->
+        <section id="habilidades" class="scroll-mt-24">
+
+          <h2 class="text-2xl font-semibold text-white border-b border-slate-800 pb-2 mb-6 flex items-center gap-2">
+            <i class="fa-solid fa-code text-cyan-400 text-lg"></i>
+            Habilidades Técnicas
+          </h2>
+
+          <ul class="flex flex-wrap gap-3">
+            <li class="inline-flex items-center gap-2 bg-slate-900 border border-slate-800 px-4 py-2 rounded-lg text-sm  hover:border-cyan-500/50 transitio">
+              <i class="fa-brands fa-html5 text-orange-500 text-base"></i>
+              HTML5 Semántico
+            </li>
+            <li class="inline-flex items-center gap-2 bg-slate-900 border border-slate-800 px-4 py-2 rounded-lg text-sm  hover:border-cyan-500/50 transitio">
+              <i class="fa-brands fa-bootstrap text-purple-500 text-base"></i>
+              Bootstrap CSS
+            </li>
+            <li class="inline-flex items-center gap-2 bg-slate-900 border border-slate-800 px-4 py-2 rounded-lg text-sm  hover:border-cyan-500/50 transitio">
+              <i class="fa-solid fa-wind text-cyan-400 text-base"></i>
+              Tailwind CSS
+            </li>
+            <li class="inline-flex items-center gap-2 bg-slate-900 border border-slate-800 px-4 py-2 rounded-lg text-sm  hover:border-cyan-500/50 transitio">
+              <i class="fa-brands fa-python text-yellow-400 text-base"></i>
+              Python
+            </li>
+            <li class="inline-flex items-center gap-2 bg-slate-900 border border-slate-800 px-4 py-2 rounded-lg text-sm  hover:border-cyan-500/50 transitio">
+              <i class="fa-brands fa-js text-yellow-300 text-base"></i>
+              JavaScript
+            </li>
+            <li class="inline-flex items-center gap-2 bg-slate-900 border border-slate-800 px-4 py-2 rounded-lg text-sm  hover:border-cyan-500/50 transitio">
+              <i class="fa-brands fa-git-alt text-red-500 text-base"></i>
+              Git y GitHub
+            </li>
+          </ul>
+        </section>
+
+        <!-- Sección: Proyectos -->
+        <section id="proyectos" class="scroll-mt-24">
+
+          <h2 class="text-2xl font-semibold text-white border-b border-slate-800 pb-2 mb-6 flex items-center gap-2">
+            <i class="fa-solid fa-laptop-code text-cyan-400 text-lg"></i>
+            Proyectos Destacados
+          </h2>
+          
+          <!-- Cuadrícula responsiva: 1 columna en móvil, 2 columnas desde pantallas medianas -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Tarjeta de Proyecto 1 -->
+            <article class="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col justify-between hover:border-cyan-500/50 transition">
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Mi Portafolio Personal</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                  Página web tipo hoja de vida construida desde cero aplicando HTML semántico, modo oscuro y compilación profesional con Tailwind CSS CLI.
+                </p>
+              </div>
+              
+              <div>
+                <!-- Etiquetas de tecnologías -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="text-xs bg-slate-800 text-cyan-400 px-2.5 py-1 rounded-md font-medium">HTML5</span>
+                  <span class="text-xs bg-slate-800 text-cyan-400 px-2.5 py-1 rounded-md font-medium">Tailwind CLI</span>
+                </div>
+                
+                <!-- Enlace al repositorio -->
+                <a href="https://github.com/AndresCardona-1314/PaginaWeb.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-medium text-cyan-400 hover:text-cyan-300 transition">
+                  <i class="fa-brands fa-github"></i>
+                  Ver código en GitHub →
+                </a>
+              </div>
+            </article>
+
+            <!-- Tarjeta de Proyecto 2 (Plantilla lista para tu segundo proyecto) -->
+            <article class="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col justify-between hover:border-cyan-500/50 transition">
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Rueda Libre</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                  Rueda Libre es un sitio para conocer los servicios de alquiler de bicicletas y recorridos guiados por Medellín. Incluye información de tarifas, un formulario de reservas y una landing independiente para las rutas nocturnas, con inscripción y planes.
+                </p>
+              </div>
+              
+              <div>
+                <!-- Etiquetas de tecnologías -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="text-xs bg-slate-800 text-cyan-400 px-2.5 py-1 rounded-md font-medium">HTML5 semántico</span>
+                  <span class="text-xs bg-slate-800 text-cyan-400 px-2.5 py-1 rounded-md font-medium">Bootstrap 5.3.8</span>
+                  <span class="text-xs bg-slate-800 text-cyan-400 px-2.5 py-1 rounded-md font-medium">Bootstrap Icons 1.13.2</span>
+                  <span class="text-xs bg-slate-800 text-cyan-400 px-2.5 py-1 rounded-md font-medium">CSS propio</span>
+                  <span class="text-xs bg-slate-800 text-cyan-400 px-2.5 py-1 rounded-md font-medium">Tailwind CSS 4.3.5 con CLI</span>
+                  <span class="text-xs bg-slate-800 text-cyan-400 px-2.5 py-1 rounded-md font-medium">Google Fonts: Montserrat y Open Sans</span>
+                  <span class="text-xs bg-slate-800 text-cyan-400 px-2.5 py-1 rounded-md font-medium">GitHub Pages</span>
+                </div>
+                
+                <!-- Enlace al repositorio -->
+                <a href="https://github.com/AndresCardona-1314/rueda-libre.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-medium text-cyan-400 hover:text-cyan-300 transition">
+                  <i class="fa-brands fa-github"></i>
+                  Ver código en GitHub →
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- Sección: Ruta de Aprendizaje -->
+        <section id="ruta" class="scroll-mt-24">
+          <h2 class="text-2xl font-semibold text-white border-b border-slate-800 pb-2 mb-6 flex items-center gap-2">
+            <i class="fa-solid fa-road text-cyan-400 text-lg"></i>
+            Ruta de Formación
+          </h2>
+          <ol class="list-decimal list-inside space-y-3 text-slate-300 bg-slate-900/50 border border-slate-800/80 p-6 rounded-xl">
+            <li><span class="font-medium text-white">Fundamentos de Lógica y Python:</span> Variables, condicionales, ciclos y funciones.</li>
+            <li><span class="font-medium text-white">Desarrollo Web Frontend:</span> HTML5 semántico, CSS3 y Tailwind CSS.</li>
+            <li><span class="font-medium text-white">Programación con JavaScript:</span> Interactividad, manipulación del DOM y lógica en el navegador.</li>
+            <li><span class="font-medium text-white">Backend y Bases de Datos:</span> Servidores, APIs y persistencia de información.</li>
+          </ol>
+        </section>
+
+      </main>
+    </div>      
+
+      <!-- 3. PIE DE PÁGINA / CONTACTO -->
+      <footer id="contacto" class="bg-slate-900 border-t border-slate-800 py-12 mt-16">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        
+        <h2 class="text-2xl font-bold text-white mb-2">¿Conectamos?</h2>
+        <p class="text-slate-400 text-sm mb-6">
+          Abierto a colaborar en proyectos, compartir aprendizajes y seguir creciendo como desarrollador.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+          
+          <a href="https://github.com/AndresCardona-1314" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 font-medium px-5 py-2.5 rounded-lg transition">
+            <i class="fa-brands fa-github text-lg"></i>
+            GitHub
+          </a>
+
+          <a href="https://www.linkedin.com/in/andr%C3%A9s-cardona-a17379248/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white font-medium px-5 py-2.5 rounded-lg transition">
+            <i class="fa-brands fa-linkedin text-lg"></i>
+            LinkedIn
+          </a>
+
+          <a href="mailto:cardonagilandresfelipe@gmail.com" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium px-5 py-2.5 rounded-lg transition">
+            <i class="fa-solid fa-envelope text-lg"></i>
+            Correo
+          </a>
+
+        </div>
+
+        <p class="text-xs text-slate-500">
+          © 2026 Andrés Cardona. Construido con HTML5 y Tailwind CSS.
+        </p>
+
+      </div>
+    </footer>
+
+    
   </body>
 </html>
